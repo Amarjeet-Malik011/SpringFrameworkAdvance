@@ -1,5 +1,6 @@
 package com.spring.demo.controller;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 // Q2...Now remove AbstractController and useMultiActionController for StudentController which contains 2 actions one action renders a jsp view
 // and another action uses HttpServletResponse to show the output on the Web browser.
+@Component("/helloC")
 public class HelloController extends MultiActionController {
 
     public ModelAndView hello(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {

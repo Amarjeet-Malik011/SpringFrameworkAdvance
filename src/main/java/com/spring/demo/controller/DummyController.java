@@ -57,7 +57,7 @@ public class DummyController {
         return modelAndView;
     }
 
-    //Q9...Use @RequestParam annotation to access the firstname and lastname in formData action of StudentController.
+    //Q8...Use @RequestParam annotation to access the firstname and lastname in formData action of StudentController.
     @RequestMapping(value = "/submitForm", method = RequestMethod.POST)
     @ResponseBody
     String submitForm(String username, String password)
@@ -65,7 +65,7 @@ public class DummyController {
         return "Username::" + username + " Password::" + password;
     }
 
-    //Q10...Create a StudentCO and bind firstname and lastname with instance variable of StudentCO.
+    //Q9...Create a StudentCO and bind firstname and lastname with instance variable of StudentCO.
     @RequestMapping(value = "/submitUser", method = RequestMethod.POST)
     @ResponseBody
     ModelAndView submitUserForm(@ModelAttribute("user") UserCO userCO) {
@@ -73,7 +73,7 @@ public class DummyController {
         return modelAndView;
     }
 
-    //Q11...Use @ModelAttribute annotation to add Heading "Spring MVC Demo" in every model.
+    //Q10...Use @ModelAttribute annotation to add Heading "Spring MVC Demo" in every model.
     @ModelAttribute
     void addingObject(Model model){
         model.addAttribute("heading","Spring MVC Demo");
