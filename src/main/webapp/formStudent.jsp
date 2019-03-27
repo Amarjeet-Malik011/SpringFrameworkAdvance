@@ -4,8 +4,8 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" action="/submitForm">
-<%--<form method="post" action="/submitUser">--%>
+<%--<form method="post" action="/submitForm">--%>
+<form method="post" action="/submitStudent">
     <label>FirstName</label>
     <input name="firstname" type="text">
     <br>

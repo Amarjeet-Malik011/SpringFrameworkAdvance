@@ -1,5 +1,5 @@
 package com.spring.demo.controller;
-import com.spring.demo.entityCO.UserCO;
+import com.spring.demo.entityCO.StudentCO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -60,15 +60,15 @@ public class DummyController {
     //Q8...Use @RequestParam annotation to access the firstname and lastname in formData action of StudentController.
     @RequestMapping(value = "/submitForm", method = RequestMethod.POST)
     @ResponseBody
-    String submitForm(String username, String password)
+    String submitForm(@RequestParam("firstname") String username, @RequestParam("lastname") String password)
     {
-        return "Username::" + username + " Password::" + password;
+        return "Username::" + username + " <br>Password::" + password;
     }
 
     //Q9...Create a StudentCO and bind firstname and lastname with instance variable of StudentCO.
-    @RequestMapping(value = "/submitUser", method = RequestMethod.POST)
+    @RequestMapping(value = "/submitStudent", method = RequestMethod.POST)
     @ResponseBody
-    ModelAndView submitUserForm(@ModelAttribute("user") UserCO userCO) {
+    ModelAndView submitStudentForm(@ModelAttribute("student") StudentCO studentCO) {
         ModelAndView modelAndView = new ModelAndView("submittedData");
         return modelAndView;
     }

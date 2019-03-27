@@ -1,6 +1,6 @@
 package com.spring.demo.entityCO;
 
-public class UserCO {
+public class StudentCO {
     String firstname;
     String lastname;
 
